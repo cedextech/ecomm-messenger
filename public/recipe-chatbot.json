@@ -1,0 +1,30 @@
+{
+    "title": "Recipe Facebook Messenger Chatbot",
+    "description": "Chatbots can be programmed to handle any process. OnChatbot can help you in creating chatbots based on your unique requirements, which will help your business to stand out in the crowd.",
+    "seo_description": "",
+    "features": [{
+        "title": "Browse Recipes",
+        "description": "Find all the available products and buy using Facebook Messenger native payment or any online payments services like Stripe, PayPal or Braintree."
+    }, {
+        "title": "Browse Recipes",
+        "description": "Find all the available products and buy using Facebook Messenger native payment or any online payments services like Stripe, PayPal or Braintree."
+    }, {
+        "title": "Browse Recipes",
+        "description": "Find all the available products and buy using Facebook Messenger native payment or any online payments services like Stripe, PayPal or Braintree."
+    }, {
+        "title": "Browse Recipes",
+        "description": "Find all the available products and buy using Facebook Messenger native payment or any online payments services like Stripe, PayPal or Braintree."
+    }, {
+        "title": "Browse Recipes",
+        "description": "Find all the available products and buy using Facebook Messenger native payment or any online payments services like Stripe, PayPal or Braintree."
+    }],
+    "channel_description": "ee how other companies use Facebook Messenger chatbots to drive sales and engage with customers",
+    "youtube_url": "https://www.youtube.com/embed/LEipR-nyrB4?autoplay=0&amp;rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1",
+    "screenshots": [
+        "chatbots/recipe-chatbot/1.png",
+        "chatbots/recipe-chatbot/1.png",
+        "chatbots/recipe-chatbot/1.png",
+        "chatbots/recipe-chatbot/1.png"
+    ],
+    "messenger_url": "https://m.me/425610657837788"
+}

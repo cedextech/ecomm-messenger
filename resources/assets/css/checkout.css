@@ -1,0 +1,179 @@
+.head {
+    border-bottom: 1px solid rgba(0, 0, 0, .10);
+    height: 50px;
+    line-height: 50px;
+    color: #1d2129;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-head {
+    height: 50px;
+    line-height: 50px;
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff !important;
+    background-color: #fafafa !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .10) !important;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    cursor: pointer;
+    padding: 0 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+.sec-cont {
+    background-color: white;
+    display: none;
+}
+
+.cart-row span {
+    color: #1d2129;
+    font-size: 13px !important;
+}
+
+.p-name {
+    float: left;
+    width: 60%;
+}
+
+.p-quantity {
+    float: left;
+}
+
+.p-price {
+    float: right;
+}
+
+.cart-row {
+    padding: 13px 0;
+}
+
+.clr-grey {
+    color: #929292 !important;
+}
+
+.txt-bold {
+    font-weight: bold;
+}
+
+/*.clr-grey{
+    color:#cdcdd1 !important;
+}*/
+.text-item {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+.text-item label {
+    color: #929292;
+    font-size: 13px;
+    margin-bottom: 0px !important;
+    font-weight: normal;
+}
+
+.txt-box {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0px 0px 6px 0px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.txt-box:active {
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-bottom: 1px solid #0084ff;
+}
+
+.btn-blue-full[disabled] {
+    pointer-events: none;
+}
+
+.btn-blue-full {
+    background-color: #0084ff;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    border: 0px;
+    height: 40px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.pd-15 {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+::-webkit-input-placeholder {
+
+    /* WebKit, Blink, Edge */
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+:-moz-placeholder {
+
+    /* Mozilla Firefox 4 to 18 */
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+
+    /* Mozilla Firefox 19+ */
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+
+    /* Internet Explorer 10-11 */
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+::-ms-input-placeholder {
+
+    /* Microsoft Edge */
+    color: #1d2129;
+    font-size: 13px;
+    font-weight: bold;
+}

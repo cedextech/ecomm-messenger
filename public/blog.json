@@ -1,0 +1,36 @@
+[{
+    "title": "E-commerce Chatbots",
+    "description": "Chatbots are taking over the world. There are thousands of Chatbots created in just 2017 alone. More and more businesses are adopting the Chatbot every day.",
+    "created_at": "Jul 18, 2017",
+    "author": "Kiran Krishnan",
+    "image": "e-commerce-chatbots.jpeg",
+    "url": "https://chatbotslife.com/e-commerce-chatbots-529b582d74ae"
+}, {
+    "title": "Messenger : Handover Protocol",
+    "description": "Messenger v2.0 introduced a new feature named “Handover Protocol” which allows different developers can collaborate to create the different scenarios and vendors and developers will be able to pass control back..",
+    "created_at": "Aug 29, 2017",
+    "author": "Jyothish G",
+    "image": "messenger-protocol-handover.jpeg",
+    "url": "https://medium.com/@cedex_tech/facebook-messenger-handover-protocol-bad707060464"
+}, {
+    "title": "Messenger Platform — Built-in NLP",
+    "description": "Built-in NLP is a feature added with the new release which deserves some attention if you are planning to build a messenger chatbot.",
+    "created_at": "Aug 15, 2017",
+    "author": "Jyothish G",
+    "image": "messenger-platform-built-in-nlp.jpeg",
+    "url": "https://medium.com/@cedex_tech/messenger-platform-built-in-nlp-ee984305c70"
+}, {
+    "title": "How to create a restaurant chatbot? [PART 1]",
+    "description": "We are going to create a restaurant chatbot with Facebook Messenger as the channel. There are many chatbot builder platforms out there which allow you to create chatbot easily.",
+    "created_at": "Aug 9, 2017",
+    "author": "Kiran Krishnan",
+    "image": "how-to-create-a-restaurant-chatbot-part1.png",
+    "url": "https://chatbotslife.com/how-to-create-a-restaurant-chatbot-part-2-fabae87cf58f"
+}, {
+    "title": "How to create a restaurant chatbot? [PART 2]",
+    "description": "Now you have a chatbot, without any useful features other than just echo the user messages. For the bots to respond, it needs to understand and interpret what user is trying to do. For this, we need a natural language processing (NLP) tool.",
+    "created_at": "Aug 9, 2017",
+    "author": "Kiran Krishnan",
+    "image": "how-to-create-a-restaurant-chatbot-part2.jpeg",
+    "url": "https://chatbotslife.com/how-to-create-a-restaurant-chatbot-part-2-fabae87cf58f"
+}]

@@ -1,0 +1,1298 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Saas API",
+        "description": "An API for Saas",
+        "termsOfService": "http://cedextech.com/terms/",
+        "contact": {
+            "name": "Cedex technologies",
+            "email": "hr@cedextech.com",
+            "url": "http://swagger.io"
+        },
+        "license": {
+            "name": "Cedex technologies",
+            "url": "http://cedextech.com"
+        }
+    },
+    "host": "localhost:8000",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/text"
+    ],
+    "paths": {
+        "/api/v1/products/{id}?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Gets products by id",
+                "operationId": "findproductById",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "product ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook Id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/products/categories/{id}?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Gets products by category",
+                "operationId": "findproductByCategoryId",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "category ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/products?keyword={key}&facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Products"
+                ],
+                "description": "Gets products by keyword",
+                "operationId": "findproductByKeyword",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response",
+                        "schema": {
+                            "$ref": "#/definitions/product"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/categories?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "description": "Gets all category",
+                "operationId": "getCategory",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "category response",
+                        "schema": {
+                            "$ref": "#/definitions/categories"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/categories/{id}?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "description": "Gets category by id",
+                "operationId": "findcategoryById",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "category ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "category response",
+                        "schema": {
+                            "$ref": "#/definitions/categories"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/shops?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Shop"
+                ],
+                "description": "Gets Shop details",
+                "operationId": "getShop",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shop response",
+                        "schema": {
+                            "$ref": "#/definitions/shops"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/shops/hours?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Shop"
+                ],
+                "description": "Gets Shop working hours",
+                "operationId": "getHour",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shop working Hours response",
+                        "schema": {
+                            "$ref": "#/definitions/workinghours"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/shops/services?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Shop"
+                ],
+                "description": "Gets service provided",
+                "operationId": "getServices",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shop service response",
+                        "schema": {
+                            "$ref": "#/definitions/shopService"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/cart?facebook_id={facebook_id}": {
+            "post": {
+                "tags": [
+                    "Cart"
+                ],
+                "description": "Add item to cart",
+                "operationId": "AddCart",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "in": "body",
+                    "name": "body",
+                    "description": "Add to cart",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/addcart"
+                    }
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response"
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/cart?facebook_id={facebook_Id}": {
+            "get": {
+                "tags": [
+                    "Cart"
+                ],
+                "description": "Gets cart details",
+                "operationId": "getCart",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "name": "facebook_Id",
+                    "in": "path",
+                    "description": "facebook id",
+                    "required": true,
+                    "type": "integer"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Cart contents response",
+                        "schema": {
+                            "$ref": "#/definitions/viewcart"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/cart/clear?facebook_id={facebook_id}": {
+            "delete": {
+                "tags": [
+                    "Cart"
+                ],
+                "description": "Clear the cart details",
+                "operationId": "clearCart",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "name": "facebook_id",
+                    "in": "path",
+                    "description": "facebook ID",
+                    "required": true,
+                    "type": "integer"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Cart contents response",
+                        "schema": {
+                            "$ref": "#/definitions/clearcart"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/cart/remove?facebook_id={facebook_id}&product_id={product_id}": {
+            "delete": {
+                "tags": [
+                    "Cart"
+                ],
+                "description": "Remove item from cart details",
+                "operationId": "removeItemCart",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "product_id",
+                        "in": "path",
+                        "description": "product ID",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Cart contents response",
+                        "schema": {
+                            "$ref": "#/definitions/removeitem"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+         "/api/v1/orders?facebook_id={facebook_id}": {
+            "post": {
+                "tags": [
+                    "Orders"
+                ],
+                "description": "Place the order",
+                "operationId": "PlaceOrder",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "in": "body",
+                    "name": "body",
+                    "description": "Place Order",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/orders"
+                    }
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook_id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "order response"
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/orders/{order_reference}?facebook_id={facebook_id}": {
+            "get": {
+                "tags": [
+                    "Orders"
+                ],
+                "description": "Gets Order details",
+                "operationId": "getOrder",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "order_reference",
+                        "in": "path",
+                        "description": "order reference",
+                        "required": true,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Order Details response",
+                        "schema": {
+                            "$ref": "#/definitions/orders"
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/customers?facebook_id={facebook_id}": {
+            "post": {
+                "tags": [
+                    "Customer"
+                ],
+                "description": "Customer signin or signup to the API",
+                "operationId": "AddCustomer",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "in": "body",
+                    "name": "body",
+                    "description": "customer authentication",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/customer"
+                    }
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response"
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/checkout/getUrl?facebook_id={facebook_id}": {
+            "post": {
+                "tags": [
+                    "Checkout"
+                ],
+                "description": "Get checkout url",
+                "operationId": "CheckoutUrl",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "keyword",
+                        "required": true,
+                        "type": "string",
+                        "schema": {
+                        "$ref": "#/definitions/checkoutUrl"
+                    }
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Checkout url response"
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/api/v1/checkout/service?facebook_id={facebook_id}": {
+            "post": {
+                "tags": [
+                    "Checkout"
+                ],
+                "description": "Checkout service needed",
+                "operationId": "AddService",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                    "in": "body",
+                    "name": "body",
+                    "description": "customer authentication",
+                    "required": true,
+                    "schema": {
+                        "$ref": "#/definitions/checkoutService"
+                    }
+                    },
+                    {
+                        "name": "facebook_id",
+                        "in": "path",
+                        "description": "facebook id",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "service",
+                        "in": "body",
+                        "description": "checkout service",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "X-BOT-ENGINE-ACCESS-TOKEN",
+                        "in": "header",
+                        "description": "Bot engine access token",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    },
+                    {
+                        "name": "X-FACEBOOK-PAGE-ID",
+                        "in": "header",
+                        "description": "Facebook page id",
+                        "required": true,
+                        "type": "string",
+                        "format": "string",
+                        "default": "xxxx"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "product response"
+                    },
+                    "405": {
+                        "description": "Invalid input"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "product": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "category_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "categories": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "addcart": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "product_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "clearcart": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "removeitem": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "product_id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "viewcart": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "image": {
+                    "type": "string"
+                },
+                "quantity": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "subtotal": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "total": {
+                    "type": "string"
+                },
+                "total_item": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "shops": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "string"
+                },
+                "longitude": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "about": {
+                    "type": "string"
+                },
+                "banner": {
+                    "type": "string"
+                },
+                "logo": {
+                    "type": "string"
+                },
+                "minimum_delivery_amount": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "has_delivery": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "has_pickup": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "delivery_charge": {
+                    "type": "integer",
+                    "format": "int64"
+                }                
+            }
+        },
+        "workinghours": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "day": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "day_text": {
+                    "type": "string"
+                },
+                "morning_opening_time": {
+                    "type": "string"
+                },
+                "morning_closing_time": {
+                    "type": "string"
+                },
+                "evening_opening_time": {
+                    "type": "string"
+                },
+                "evening_closing_time": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "integer",
+                    "format": "int64"
+                }               
+            }
+        },
+        "customer": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "orders": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "shop_uid": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "street": {
+                    "type": "string"
+                },
+                "service": {
+                    "type": "string"
+                },
+                "special_request": {
+                    "type": "string"
+                },
+                "zipcode": {
+                    "type": "integer",
+                    "format": "int64"
+                }               
+            }
+        },
+        "checkoutUrl": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "shopService": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "checkoutService": {
+            "type": "object",
+            "properties": {
+                "facebook_id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "service": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+body {
+    font-family: 'Miriam Libre', sans-serif;
+}
+
+.login-page {
+    background-image: url('/img/login-page-background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+
+.tab-subtitle {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: normal;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.btn.btn-flat {
+    width: 140px;
+}
+
+.alert {
+    margin: 10px 10px;
+}
+
+.pricing-table .plan {
+    border: 1px solid #d5d5d5;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
+    margin: 0 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.pricing-table .plan:hover {
+    border-color: #ccc #ccc #bbb;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.pricing-table .plan-name {
+    padding: 30px 0;
+}
+
+.pricing-table .plan-name h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.pricing-table .plan-name h2 + p {
+    margin: 10px 15px 0;
+}
+
+.pricing-table .plan-price {
+    background: #fafafa;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 0;
+}
+
+.pricing-table .plan-price b {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.pricing-table .plan-price b b {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pricing-table .prefered .plan-price {
+    background: #fff7e3;
+    color: #b0a996;
+}
+
+.pricing-table .prefered .plan-price b {
+    color: #d95246;
+}
+
+.pricing-table .plan-details {
+    padding: 0 10px;
+}
+
+.pricing-table .plan-details > div {
+    background: #fff;
+    padding: 15px;
+}
+
+.pricing-table .plan-details > div + div {
+    border-top: 1px solid #e5e5e5;
+}
+
+.pricing-table .plan-action {
+    background: #fafafa;
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    border-top: 1px solid #e5e5e5;
+    padding: 15px;
+}
+
+.pricing-table.row-merge .plan {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.pricing-table.row-merge [class*="span"]:first-child .plan {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.pricing-table.row-merge [class*="span"]:last-child .plan {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.pricing-table.row-merge [class*="span"] + [class*="span"] .plan {
+    margin-left: -1px;
+}
+
+.btn-margin-10 {
+    margin: 10px 10px;
+}
+
+#report-table > tbody > tr:first-child > td {
+    border: none;
+}
+
+.bar {
+    height: 18px;
+    background: green;
+}
+
+#image-banner-url {
+    width: 600px;
+    height: 300px;
+}
+
+.well {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px;
+    border-radius: 0px;
+    padding: 15px;
+}
